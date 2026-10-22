@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <title>HOTAC - الشركة القابضة للسياحة والفنادق</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="الشركة القابضة للسياحة والفنادق, HOTAC, إيجوث, مصر للسياحة, مصر للفنادق, استثمار سياحي, فنادق مصر التاريخية" name="keywords">
+    <meta content="الموقع الرسمي للشركة القابضة للسياحة والفنادق (HOTAC) - إحدى شركات وزارة قطاع الأعمال العام في مصر" name="description">
+
+    <!-- Favicon -->
+    <link href="https://hotac.com.eg/wp-content/uploads/2019/06/logo-e1612359389425-150x150.png" rel="icon">
+
+    <!-- Google Web Fonts (Cairo & Tajawal) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 & Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+
+    <!-- Custom CSS Stylesheet -->
+    <style>
+        :root {
+            --primary-navy: #0B2545;
+            --secondary-navy: #134074;
+            --accent-gold: #C5A059;
+            --gold-hover: #A8823E;
+            --light-bg: #F4F7FA;
+            --dark-text: #1E293B;
+            --muted-text: #64748B;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: var(--dark-text);
+            background-color: #ffffff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Top Bar Styling */
+        .top-bar {
+            background-color: var(--primary-navy);
+            color: #E2E8F0;
+            font-size: 0.875rem;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .top-bar a {
+            color: #E2E8F0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .top-bar a:hover {
+            color: var(--accent-gold);
+        }
+
+        .social-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            margin-left: 6px;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+        }
+
+        .social-btn:hover {
+            background-color: var(--accent-gold);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Custom Navbar */
+        .navbar-custom {
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border-bottom: 3px solid var(--accent-gold);
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand-box {
+            /*background-color: var(--primary-navy);*/
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom-left-radius: 16px;
+            text-decoration: none;
+        }
+
+        .navbar-brand-box img {
+            height: 48px;
+            width: auto;
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .nav-link {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary-navy) !important;
+            padding: 1.4rem 1rem !important;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-gold) !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: var(--accent-gold);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 60%;
+        }
+
+        .dropdown-menu {
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            padding: 10px;
+            text-align: right;
+        }
+
+        .dropdown-item {
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 10px 16px;
+            border-radius: 8px;
+            color: var(--dark-text);
+            transition: all 0.2s;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--light-bg);
+            color: var(--accent-gold);
+            transform: translateX(-4px);
+        }
+
+        /* Hero Section Slider */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(11, 37, 69, 0.85) 0%, rgba(19, 64, 116, 0.75) 100%), 
+                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        .hero-badge {
+            background: rgba(197, 160, 89, 0.2);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.25;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Buttons Styling */
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: #ffffff !important;
+            font-weight: 700;
+            padding: 12px 32px;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.4);
+        }
+
+        .btn-outline-light-custom {
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            color: #ffffff !important;
+            font-weight: 700;
+            padding: 11px 30px;
+            border-radius: 8px;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light-custom:hover {
+            background-color: #ffffff;
+            color: var(--primary-navy) !important;
+            transform: translateY(-3px);
+        }
+
+        /* Section Headings */
+        .section-badge {
+            color: var(--accent-gold);
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .section-heading {
+            color: var(--primary-navy);
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-gold);
+            margin: 12px 0 0 0;
+            border-radius: 2px;
+        }
+
+        .section-heading.text-center::after {
+            margin: 12px auto 0 auto;
+        }
+
+        /* Vision & Mission Special Cards */
+        .vm-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 35px 30px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            height: 100%;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vm-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6px;
+            height: 100%;
+            background-color: var(--accent-gold);
+        }
+
+        .vm-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(11, 37, 69, 0.1);
+        }
+
+        .vm-icon-box {
+            width: 75px;
+            height: 75px;
+            border-radius: 16px;
+            background: rgba(197, 160, 89, 0.12);
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+
+        /* Core Values Card */
+        .value-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 25px 20px;
+            text-align: center;
+            border: 1px solid #E2E8F0;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .value-card:hover {
+            background: var(--primary-navy);
+            color: #ffffff;
+            transform: translateY(-5px);
+        }
+
+        .value-card:hover .value-icon {
+            color: var(--accent-gold);
+        }
+
+        .value-card:hover p {
+            color: #CBD5E1 !important;
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-navy);
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        /* About Cards & Image Grid */
+        .about-img-frame {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(11, 37, 69, 0.15);
+        }
+
+        .about-img-frame img {
+            transition: transform 0.5s ease;
+        }
+
+        .about-img-frame:hover img {
+            transform: scale(1.04);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+            background: var(--primary-navy);
+            color: #ffffff;
+            padding: 20px 25px;
+            border-radius: 12px;
+            border-right: 5px solid var(--accent-gold);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Leadership Blue Box */
+        .leadership-blue-box {
+            background: linear-gradient(135deg, #0B2545 0%, #134074 100%);
+            border-radius: 16px;
+            padding: 40px;
+            color: #ffffff;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(11, 37, 69, 0.25);
+            border-right: 6px solid var(--accent-gold);
+        }
+
+        .leadership-quote-icon {
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.08);
+        }
+
+        .leader-avatar-frame {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-gold);
+            padding: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            margin-bottom: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .leader-avatar-frame:hover {
+            transform: scale(1.05);
+            border-color: #ffffff;
+        }
+
+        .leader-avatar-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Stats Cards */
+        .stat-card-custom {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 28px 20px;
+            text-align: center;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card-custom::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-gold);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card-custom:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(11, 37, 69, 0.12);
+        }
+
+        .stat-card-custom:hover::before {
+            opacity: 1;
+        }
+
+        .stat-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Portfolio Asset Cards */
+        .asset-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+            transition: all 0.35s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .asset-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px rgba(11, 37, 69, 0.12);
+            border-color: var(--accent-gold);
+        }
+
+        .asset-img-box {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .asset-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .asset-card:hover .asset-img-box img {
+            transform: scale(1.08);
+        }
+
+        .asset-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(11, 37, 69, 0.85);
+            color: var(--accent-gold);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            backdrop-filter: blur(4px);
+        }
+
+        .asset-body {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Subsidiary Cards */
+        .subsidiary-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 28px 22px;
+            border: 1px solid #E2E8F0;
+            border-top: 4px solid var(--primary-navy);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+
+        .subsidiary-card:hover {
+            transform: translateY(-6px);
+            border-top-color: var(--accent-gold);
+            box-shadow: 0 16px 30px rgba(11, 37, 69, 0.1);
+        }
+
+        .subsidiary-icon-wrap {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--light-bg);
+            color: var(--secondary-navy);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .subsidiary-card:hover .subsidiary-icon-wrap {
+            background: var(--accent-gold);
+            color: #ffffff;
+        }
+
+        /* Form Styling */
+        .form-control-custom {
+            height: 52px;
+            border-radius: 8px;
+            border: 1px solid #CBD5E1;
+            padding: 10px 18px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control-custom:focus {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.25);
+        }
+
+        /* Footer Styling */
+        .footer-bg {
+            background-color: var(--primary-navy);
+            color: #94A3B8;
+            border-top: 5px solid var(--accent-gold);
+        }
+
+        .footer-heading {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        .footer-link {
+            color: #CBD5E1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            transition: all 0.2s ease;
+            font-size: 0.92rem;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-gold);
+            transform: translateX(-5px);
+        }
+
+        section {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar Start -->
+    <div class="top-bar py-2 px-3 d-none d-lg-block">
+        <div class="container-fluid max-w-7xl">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="d-flex align-items-center gap-4">
+                        <span><i class="fa fa-phone-alt text-warning me-2"></i> +20 (2) 27940036 / 27954153</span>
+                        <span><i class="fa fa-envelope text-warning me-2"></i> info@hotac.com.eg</span>
+                        <span><i class="fa fa-building text-warning me-2"></i> إحدى شركات وزارة قطاع الأعمال العام</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-start">
+                    <div class="d-inline-flex align-items-center gap-2">
+                        <a class="social-btn" href="#" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-btn" href="#" title="يوتيوب"><i class="fab fa-youtube"></i></a>
+                        <a class="social-btn" href="#" title="تويتر"><i class="fab fa-x-twitter"></i></a>
+                        <a class="social-btn" href="#" title="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+                        <span class="text-white-50 mx-2">|</span>
+                        <a href="#" class="text-white text-decoration-none fw-bold small"><i class="fa fa-globe ms-1"></i> English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-lg-4">
+            <a href="#home" class="navbar-brand-box">
+                <img src="https://hotac.com.eg/wp-content/uploads/2019/06/logo-e1612359389425-150x150.png" alt="HOTAC Logo">
+                <div>
+                    <h4 class="m-0 text-white font-bold" style="font-size: 1.2rem; letter-spacing: 0.5px;">HOTAC</h4>
+                    <!--<span class="small text-warning fw-semibold" style="font-size: 0.78rem;">الشركة القابضة للسياحة والفنادق</span>-->
+                </div>
+            </a>
+            
+            <button type="button" class="navbar-toggler me-3" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse px-3" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-3 p-lg-0 align-items-lg-center">
+                    <a href="#home" class="nav-item nav-link active">الرئيسية</a>
+                    
+                    <!-- Dropdown: About -->
+                    <div class="nav-item dropdown">
+                        <a href="#about" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">عن الشركة</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="#about" class="dropdown-item"><i class="fa fa-building ms-2 text-warning"></i> الشركة القابضة (التأسيس)</a>
+                            <a href="#vision-mission" class="dropdown-item"><i class="fa fa-eye ms-2 text-warning"></i> رؤيتنا ورسالتنا وقيمنا</a>
+                            <a href="#leadership" class="dropdown-item"><i class="fa fa-user-tie ms-2 text-warning"></i> كلمة القيادة Execs</a>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown: Assets Portfolio -->
+                    <div class="nav-item dropdown">
+                        <a href="#assets" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">أصول الشركة</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="#assets" class="dropdown-item"><i class="fa fa-hotel ms-2 text-warning"></i> الفنادق التاريخية والحديثة</a>
+                            <a href="#assets" class="dropdown-item"><i class="fa fa-utensils ms-2 text-warning"></i> المطاعم والمنشآت السياحية</a>
+                            <a href="#assets" class="dropdown-item"><i class="fa fa-map-marked-alt ms-2 text-warning"></i> الأراضي والفرص العقارية</a>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown: Subsidiaries -->
+                    <div class="nav-item dropdown">
+                        <a href="#subsidiaries" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">الشركات التابعة</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="#subsidiaries" class="dropdown-item">شركة إيجوث (EGOTH)</a>
+                            <a href="#subsidiaries" class="dropdown-item">شركة مصر للسياحة</a>
+                            <a href="#subsidiaries" class="dropdown-item">شركة مصر للفنادق</a>
+                            <a href="#subsidiaries" class="dropdown-item">شركة المعمورة للتعمير والتنمية</a>
+                            <a href="#subsidiaries" class="dropdown-item">شركة مصر للصوت والضوء</a>
+                            <a href="#subsidiaries" class="dropdown-item">بيوت الأزياء الراقية (صيدناوي وشيكوريل)</a>
+                            <a href="#subsidiaries" class="dropdown-item">شركة بيع المصنوعات المصرية</a>
+                            <a href="#subsidiaries" class="dropdown-item">الشركة التجارية للأخشاب</a>
+                            <a href="#subsidiaries" class="dropdown-item">شركة عمر أفندي</a>
+                        </div>
+                    </div>
+
+                    <a href="#investments" class="nav-item nav-link">فرص الاستثمار</a>
+                    <a href="#news" class="nav-item nav-link">الأخبار</a>
+                    <a href="#contact" class="nav-item nav-link">اتصل بنا</a>
+
+                    <div class="ms-lg-3 mt-3 mt-lg-0">
+                        <a href="#investments" class="btn btn-gold py-2 px-3 text-nowrap" style="font-size: 0.88rem;">
+                            <i class="fa fa-handshake ms-1"></i> بوابة الاستثمار
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="hero-section">
+        <div class="container py-5">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-lg-9 col-md-11">
+                    <span class="hero-badge mb-3"><i class="fa fa-star ms-1"></i> صرح الاستثمار السياحي والفندقي الأكبر في مصر</span>
+                    <h1 class="hero-title mb-4">ريادة الفندقة والخدمات السياحية وتطوير التراث المصري الأصيل</h1>
+                    <p class="fs-5 text-light mb-5 leading-relaxed" style="max-width: 800px; font-weight: 400; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                        تقوم الشركة القابضة للسياحة والفنادق (HOTAC) بتعزيز القيمة المضافة للأصول الفندقية والسياحية، مع إدارة وتطوير أعرق المعالم والفنادق المصرية التاريخية بالتعاون مع أرقى شركات الإدارة العالمية.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#about" class="btn btn-gold fs-6"><i class="fa fa-compass ms-2"></i> اكتشف القابضة</a>
+                        <a href="#investments" class="btn btn-outline-light-custom fs-6"><i class="fa fa-chart-pie ms-2"></i> الفرص الاستثمارية</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Section 1: About HOTAC (قسم الشركة القابضة) -->
+    <section id="about" class="py-5">
+        <div class="container py-4">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img-frame">
+                        <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80" alt="الفنادق المصرية التراثية" style="min-height: 440px; object-fit: cover;">
+                        <div class="experience-badge">
+                            <h3 class="m-0 text-warning font-bold fs-2">+30</h3>
+                            <span class="small fw-bold">عاماً من الريادة والاستثمار</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="section-badge">عن الشركة القابضة</span>
+                    <h2 class="section-heading">الشركة القابضة للسياحة والفنادق (HOTAC)</h2>
+                    <p class="text-muted leading-relaxed mb-3" style="font-size: 1.05rem;">
+                        الشركة القابضة للسياحة والفنادق هي شركة قابضة مساهمة مصرية تأسست طبقاً لأحكام قانون شركات قطاع الأعمال العام رقم 203 لسنة 1991 وتعد إحدى ركائز الاستثمار التابعة لوزارة قطاع الأعمال العام.
+                    </p>
+                    <p class="text-muted leading-relaxed mb-4">
+                        يقوم غرض الشركة — وفقاً لنظامها الأساسي — على المشاركة في تنمية الاقتصاد القومي من خلال إدارة وتطوير محفظة استثمارية فريدة تضم 9 شركات تابعة تتنوع أنشطتها بين الفنادق التراثية والحديثة، البرامج السياحية والنقل، العروض الثقافية (الصوت والضوء)، التعمير والتنمية العقارية، والتجارة الداخلية.
+                    </p>
+                    
+                    <div class="row g-3 pt-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background: var(--light-bg);">
+                                <i class="fa fa-award fa-2x text-warning"></i>
+                                <div>
+                                    <h6 class="mb-1 font-bold">شراكات عالمية</h6>
+                                    <p class="m-0 text-muted small">ماريوت، ريتز، أكور وشتاينبرجر</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background: var(--light-bg);">
+                                <i class="fa fa-landmark fa-2x text-warning"></i>
+                                <div>
+                                    <h6 class="mb-1 font-bold">أصول تاريخية</h6>
+                                    <p class="m-0 text-muted small">حماية وتطوير أعرق الفنادق</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 1 End -->
+
+    <!-- Section 2: Vision & Mission & Strategic Objectives (قسم رؤيتنا ورسالتنا والأهداف) -->
+    <section id="vision-mission" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5 max-w-2xl mx-auto">
+                <span class="section-badge">التوجه الاستراتيجي</span>
+                <h2 class="section-heading text-center">رؤيتنا ورسالتنا وأهدافنا</h2>
+                <p class="text-muted">نضع خريطة عمل متكاملة للارتقاء بقطاع السياحة والفنادق وتعظيم الموارد القومية</p>
+            </div>
+            
+            <!-- Vision & Mission Cards Grid -->
+            <div class="row g-4 mb-5">
+                <!-- Our Vision -->
+                <div class="col-lg-6">
+                    <div class="vm-card">
+                        <div class="vm-icon-box">
+                            <i class="fa fa-eye"></i>
+                        </div>
+                        <h3 class="font-bold text-navy mb-3">رؤيتنا (Our Vision)</h3>
+                        <p class="text-muted leading-relaxed fs-5 m-0">
+                            "أن نكون المجموعة القابضة الرائدة إقليمياً والدولية في إدارة وتطوير الاستثمار الفندقي والسياحي والتراثي، وتقديم نموذج مصري عالمي يجمع بين عراقة التراث التاريخي وأحدث معايير الضيافة والخدمات المستدامة."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Our Mission -->
+                <div class="col-lg-6">
+                    <div class="vm-card">
+                        <div class="vm-icon-box" style="background: rgba(19, 64, 116, 0.12); color: var(--secondary-navy);">
+                            <i class="fa fa-bullseye"></i>
+                        </div>
+                        <h3 class="font-bold text-navy mb-3">رسالتنا (Our Mission)</h3>
+                        <p class="text-muted leading-relaxed fs-5 m-0">
+                            "تعظيم العائد على أصول الدولة السياحية والعقارية، وتطوير المنشآت الفندقية والتاريخية بالشراكة مع كبرى الكيانات المحلية والعالمية، وتأهيل الكوادر البشرية الوطنية لتقديم خدمات استثنائية تدعم الاقتصاد القومي."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Values Sub-section -->
+            <div class="mb-5">
+                <h4 class="font-bold text-navy text-center mb-4"><i class="fa fa-gem text-warning ms-2"></i> قيمنا الجوهرية (Core Values)</h4>
+                <div class="row g-3">
+                    <div class="col-md-3 col-6">
+                        <div class="value-card">
+                            <i class="fa fa-leaf value-icon"></i>
+                            <h6 class="font-bold mb-2">الاستدامة</h6>
+                            <p class="text-muted small m-0">الحفاظ على البيئة والأصول للأجيال القادمة</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="value-card">
+                            <i class="fa fa-monument value-icon"></i>
+                            <h6 class="font-bold mb-2">الأصالة والتراث</h6>
+                            <p class="text-muted small m-0">صون الهوية التاريخية والمعمارية المصرية</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="value-card">
+                            <i class="fa fa-star value-icon"></i>
+                            <h6 class="font-bold mb-2">الجودة الشاملة</h6>
+                            <p class="text-muted small m-0">تطبيق أعلى المعايير الفندقية الدولية</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="value-card">
+                            <i class="fa fa-handshake-angle value-icon"></i>
+                            <h6 class="font-bold mb-2">الشفافية والحوكمة</h6>
+                            <p class="text-muted small m-0">الالتزام بالنزاهة والعدالة والاستثمار الشفاف</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategic Objectives Grid -->
+            <h4 class="font-bold text-navy text-center mb-4"><i class="fa fa-tasks text-warning ms-2"></i> الأهداف الاستراتيجية الأربعة</h4>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="asset-card text-center p-4">
+                        <div class="subsidiary-icon-wrap mx-auto">
+                            <i class="fa fa-concierge-bell"></i>
+                        </div>
+                        <h5 class="font-bold mb-3">منتج سياحي متميز</h5>
+                        <p class="text-muted small">تقديم خدمات ضيافة تضاهي المعايير العالمية وتوفر تجربة استثنائية لضيوف وزوار مصر من مختلف أنحاء العالم.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="asset-card text-center p-4">
+                        <div class="subsidiary-icon-wrap mx-auto">
+                            <i class="fa fa-hammer"></i>
+                        </div>
+                        <h5 class="font-bold mb-3">إعادة تأهيل الأصول</h5>
+                        <p class="text-muted small">التطوير المستمر للمنشآت الفندقية والسياحية وتحديث البنية التحتية مع الحفاظ على الهوية المعمارية والتاريخية.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="asset-card text-center p-4">
+                        <div class="subsidiary-icon-wrap mx-auto">
+                            <i class="fa fa-handshake"></i>
+                        </div>
+                        <h5 class="font-bold mb-3">إدارة فندقية محترفة</h5>
+                        <p class="text-muted small">جذب كبرى شركات الإدارة الفندقية العالمية لضمان أعلى مستويات الكفاءة والربحية والإشغالات الفندقية.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="asset-card text-center p-4">
+                        <div class="subsidiary-icon-wrap mx-auto">
+                            <i class="fa fa-user-graduate"></i>
+                        </div>
+                        <h5 class="font-bold mb-3">تنمية العنصر البشري</h5>
+                        <p class="text-muted small">الاهتمام بالتدريب المستمر للكوادر البشرية والفندقية وتطوير الكليات والمعاهد الفندقية التابعة للوصول للكفاءة العالية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 2 End -->
+
+    <!-- Section 3: Leadership Speech & Stats Grid Start -->
+    <section id="leadership" class="py-5">
+        <div class="container py-4">
+            <div class="row g-4 align-items-stretch">
+                
+                <!-- RIGHT COLUMN: Blue Box with Speech and Leader Photos -->
+                <div class="col-lg-7">
+                    <div class="leadership-blue-box h-100 d-flex flex-column justify-content-between">
+                        <i class="fa fa-quote-right leadership-quote-icon"></i>
+                        <div>
+                            <span class="badge bg-warning text-dark font-bold px-3 py-2 mb-3">رؤية القيادة والتطوير</span>
+                            <h3 class="text-white font-bold mb-3 fs-2">كلمة إدارة الشركة القابضة</h3>
+                            <p class="text-white-50 leading-relaxed mb-4 fs-5">
+                                "نرحب بجميع زوار موقع الشركة القابضة للسياحة والفنادق. نلتزم بمواصلة مسيرة التطوير والتحديث لكافة الأصول المملوكة للقابضة وشركاتها التابعة، والعمل على فتح آفاق جديدة للاستثمار الشفاف والشراكة الاستراتيجية مع القطاع الخاص للارتقاء بمكانة مصر السياحية عالمياً."
+                            </p>
+                        </div>
+
+                        <!-- Leaders Photos & Names Grid -->
+                        <div class="pt-4 border-top border-white-10">
+                            <div class="row g-4">
+                                <!-- Leader 1: Chairman -->
+                                <div class="col-sm-6 text-center text-sm-start">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="leader-avatar-frame flex-shrink-0">
+                                            <!-- ضع مسار صورة رئيس مجلس الإدارة هنا (LEADER_PHOTO_1) -->
+                                            <img src="img/ceo/رئيس-مجلس-الإدارة-ماجد-المنشاوى.jpg" alt="أ. ماجد المنشاوي - رئيس مجلس الإدارة">
+                                        </div>
+                                        <div>
+                                            <h5 class="text-white font-bold mb-1">أ. ماجد المنشاوي</h5>
+                                            <span class="text-warning small font-bold d-block">رئيس مجلس الإدارة</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Leader 2: Managing Director -->
+                                <div class="col-sm-6 text-center text-sm-start">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="leader-avatar-frame flex-shrink-0">
+                                            <!-- ضع مسار صورة العضو المنتدب هنا (LEADER_PHOTO_2) -->
+                                            <img src="img/ceo/team2.jpg" alt="أ. عمرو عطية - العضو المنتدب التنفيذي">
+                                        </div>
+                                        <div>
+                                            <h5 class="text-white font-bold mb-1">أ. عمرو عطية</h5>
+                                            <span class="text-warning small font-bold d-block">العضو المنتدب التنفيذي</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- LEFT COLUMN: The 4 Grid Statistic Cards -->
+                <div class="col-lg-5">
+                    <div class="row g-3 h-100">
+                        
+                        <!-- Stat Card 1 -->
+                        <div class="col-6">
+                            <div class="stat-card-custom">
+                                <div class="stat-icon-wrapper bg-primary bg-opacity-10 text-primary">
+                                    <i class="fa fa-hotel"></i>
+                                </div>
+                                <h2 class="text-navy font-bold mb-1 display-6">+25</h2>
+                                <p class="text-muted small m-0 font-bold">فندقاً ومنشأة تاريخية وحديثة</p>
+                            </div>
+                        </div>
+
+                        <!-- Stat Card 2 -->
+                        <div class="col-6">
+                            <div class="stat-card-custom">
+                                <div class="stat-icon-wrapper bg-warning bg-opacity-10 text-warning">
+                                    <i class="fa fa-building"></i>
+                                </div>
+                                <h2 class="text-navy font-bold mb-1 display-6">9</h2>
+                                <p class="text-muted small m-0 font-bold">شركات تابعة مساهمة</p>
+                            </div>
+                        </div>
+
+                        <!-- Stat Card 3 -->
+                        <div class="col-6">
+                            <div class="stat-card-custom">
+                                <div class="stat-icon-wrapper bg-success bg-opacity-10 text-success">
+                                    <i class="fa fa-handshake"></i>
+                                </div>
+                                <h2 class="text-navy font-bold mb-1 display-6">+15</h2>
+                                <p class="text-muted small m-0 font-bold">شراكة استثمارية دولية ومحلية</p>
+                            </div>
+                        </div>
+
+                        <!-- Stat Card 4 -->
+                        <div class="col-6">
+                            <div class="stat-card-custom">
+                                <div class="stat-icon-wrapper bg-danger bg-opacity-10 text-danger">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <h2 class="text-navy font-bold mb-1 display-6">+10k</h2>
+                                <p class="text-muted small m-0 font-bold">كادر بشري وفندقي مدرب</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Section 3 End -->
+
+    <!-- Section 4: Company Assets Showcase Start -->
+    <section id="assets" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="section-badge">محفظة الأصول الفريدة</span>
+                <h2 class="section-heading text-center">أبرز أصول وفنادق القابضة</h2>
+                <p class="text-muted">نمتلك نخبة من أرقى الفنادق التاريخية والعصرية والأصول الاستثمارية بجمهورية مصر العربية</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Asset Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="asset-card">
+                        <div class="asset-img-box">
+                            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="فنادق تاريخية">
+                            <span class="asset-tag">فنادق تاريخية</span>
+                        </div>
+                        <div class="asset-body">
+                            <h5 class="font-bold mb-2">فنادق التراث العريق</h5>
+                            <p class="text-muted small mb-4">تضم فنادق مثل ماريوت القاهرة (قصر الجزيرة)، مينا هاوس، ونتر بالاس بالأقصر، وكتاراكت بأسوان ذات التاريخ المجيد.</p>
+                            <a href="#investments" class="btn btn-sm btn-gold mt-auto align-self-start">التفاصيل والفرص <i class="fa fa-arrow-left ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asset Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="asset-card">
+                        <div class="asset-img-box">
+                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" alt="فنادق حديثة منتجعات">
+                            <span class="asset-tag">منتجعات حديثة</span>
+                        </div>
+                        <div class="asset-body">
+                            <h5 class="font-bold mb-2">المنتجعات والفنادق الساحلية</h5>
+                            <p class="text-muted small mb-4">فنادق ومنتجعات موزعة على البحر الأحمر، جنوب سيناء، والغردقة وشرم الشيخ ومرسى علم ومرسى مطروح والمعمورة.</p>
+                            <a href="#investments" class="btn btn-sm btn-gold mt-auto align-self-start">التفاصيل والفرص <i class="fa fa-arrow-left ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asset Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="asset-card">
+                        <div class="asset-img-box">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="أراضي وعقارات">
+                            <span class="asset-tag">تنمية عقارية</span>
+                        </div>
+                        <div class="asset-body">
+                            <h5 class="font-bold mb-2">الأراضي والمشروعات العقارية</h5>
+                            <p class="text-muted small mb-4">مساحات وأراضٍ متميزة مخصصة للاستثمار والتطوير الفندقي والعقاري في أهم المواقع الحيوية في كافة المحافظات.</p>
+                            <a href="#investments" class="btn btn-sm btn-gold mt-auto align-self-start">التفاصيل والفرص <i class="fa fa-arrow-left ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 4 End -->
+
+    <!-- Section 5: Subsidiaries Grid Start -->
+    <section id="subsidiaries" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="section-badge">منظومة القابضة</span>
+                <h2 class="section-heading text-center">الشركات التابعة للقابضة</h2>
+                <p class="text-muted">تضم الشركة القابضة 9 شركات مساهمة تابعة تعمل في قطاعات متنوعة ومتكاملة</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="subsidiary-card">
+                        <div class="subsidiary-icon-wrap">
+                            <i class="fa fa-hotel"></i>
+                        </div>
+                        <h5 class="font-bold mb-2">شركة إيجوث (EGOTH)</h5>
+                        <p class="text-muted small">الشركة المصرية للأجهزة السياحية والفندقية، تمتلك أعرق الفنادق المصرية التاريخية والحديثة والمعاهد الفندقية.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="subsidiary-card">
+                        <div class="subsidiary-icon-wrap">
+                            <i class="fa fa-plane-departure"></i>
+                        </div>
+                        <h5 class="font-bold mb-2">شركة مصر للسياحة</h5>
+                        <p class="text-muted small">أعرق شركة سياحة في الشرق الأوسط تقدم خدمات البرامج السياحية، النقل السياحي، والفنادق والمطاعم العائمة.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="subsidiary-card">
+                        <div class="subsidiary-icon-wrap">
+                            <i class="fa fa-building-columns"></i>
+                        </div>
+                        <h5 class="font-bold mb-2">شركة مصر للفنادق</h5>
+                        <p class="text-muted small">تمتلك مجموعة متميزة من الفنادق مثل النيل ريتز كارلتون ودهب سويس إن وغيرها من الفنادق الراقية.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="subsidiary-card">
+                        <div class="subsidiary-icon-wrap">
+                            <i class="fa fa-umbrella-beach"></i>
+                        </div>
+                        <h5 class="font-bold mb-2">المعمورة للتعمير والتنمية</h5>
+                        <p class="text-muted small">متخصصة في التنمية السياحية والعقارية وإدارة وتطوير منطقة المعمورة الشاطئية بالإسكندرية.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="subsidiary-card">
+                        <div class="subsidiary-icon-wrap">
+                            <i class="fa fa-lightbulb"></i>
+                        </div>
+                        <h5 class="font-bold mb-2">مصر للصوت والضوء والسينما</h5>
+                        <p class="text-muted small">تنظيم العروض الصوتية والضوئية بالمناطق الأثرية (الأهرامات، الكرنك، فيلة، أبو سمبل) والإنتاج السينمائي.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="subsidiary-card">
+                        <div class="subsidiary-icon-wrap">
+                            <i class="fa fa-bag-shopping"></i>
+                        </div>
+                        <h5 class="font-bold mb-2">صيدناوي وشيكوريل</h5>
+                        <p class="text-muted small">شركة بيوت الأزياء الراقية، تمتلك سلسلة من الفروع التجارية ذات الأصول العقارية المتميزة بجمهورية مصر العربية.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="subsidiary-card">
+                        <div class="subsidiary-icon-wrap">
+                            <i class="fa fa-store"></i>
+                        </div>
+                        <h5 class="font-bold mb-2">بيع المصنوعات المصرية</h5>
+                        <p class="text-muted small">شركة تجارية تاريخية تمتلك شبكة واسعة من الفروع التجارية والمنافذ بمختلف المحافظات.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="subsidiary-card">
+                        <div class="subsidiary-icon-wrap">
+                            <i class="fa fa-boxes-stacked"></i>
+                        </div>
+                        <h5 class="font-bold mb-2">الشركة التجارية للأخشاب</h5>
+                        <p class="text-muted small">متخصصة في الاستيراد والتجارة في مستلزمات الأخشاب والتجهيزات والمستودعات التجارية.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="subsidiary-card">
+                        <div class="subsidiary-icon-wrap">
+                            <i class="fa fa-shop"></i>
+                        </div>
+                        <h5 class="font-bold mb-2">شركة عمر أفندي</h5>
+                        <p class="text-muted small">إحدى أعرق السلاسل التجارية في مصر التي خضعت للتطوير وإعادة الهيكلة والتحديث.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 5 End -->
+
+    <!-- Section 6: Contact Us Start -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <span class="section-badge">تواصل معنا</span>
+                    <h2 class="section-heading">يسعدنا استقبال استفساراتكم</h2>
+                    <p class="text-muted mb-4">يسعد فريق التواصل بالقابضة الإجابة على كافة التساؤلات المتعلقة بالاستثمار والشراكات والخدمات الفندقية.</p>
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+                        <div class="btn-gold rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="fa fa-map-marker-alt fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="font-bold mb-1">المقر الرئيسي</h6>
+                            <p class="text-muted small m-0">4 شارع امريكا اللاتينية - جاردن سيتي - القاهرة - مصر</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+                        <div class="btn-gold rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="fa fa-phone-alt fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="font-bold mb-1">أرقام الهاتف</h6>
+                            <p class="text-muted small m-0">27940036 (202)+ - 27954153 (202)+</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="btn-gold rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="fa fa-envelope fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="font-bold mb-1">البريد الإلكتروني</h6>
+                            <p class="text-muted small m-0">info@hotac.com.eg</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border">
+                        <h4 class="font-bold mb-4">أرسل رسالة مباشرة</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label font-bold small">الاسم بالكامل</label>
+                                    <input type="text" class="form-control form-control-custom" placeholder="أدخل اسمك الكترونياً" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label font-bold small">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control form-control-custom" placeholder="name@example.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label font-bold small">رقم الهاتف</label>
+                                    <input type="tel" class="form-control form-control-custom" placeholder="010XXXXXXXX">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label font-bold small">نوع الاستفسار</label>
+                                    <select class="form-select form-control-custom">
+                                        <option selected>فرص استثمارية</option>
+                                        <option>حجز واستعلام فندقي</option>
+                                        <option>الشركات التابعة</option>
+                                        <option>عام</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label font-bold small">نص الرسالة</label>
+                                    <textarea class="form-control form-control-custom" rows="4" style="height: auto;" placeholder="اكتب تفاصيل رسالتك هنا..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-gold w-100 py-3 font-bold"><i class="fa fa-paper-plane ms-2"></i> إرسال الرسالة</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 6 End -->
+
+    <!-- Footer Start -->
+    <footer class="footer-bg pt-5 pb-3">
+        <div class="container py-4">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <img src="https://hotac.com.eg/wp-content/uploads/2019/06/logo-e1612359389425-150x150.png" alt="HOTAC Logo" style="height: 50px;">
+                        <div>
+                            <h5 class="text-white font-bold m-0">HOTAC</h5>
+                            <span class="text-warning small">الشركة القابضة للسياحة والفنادق</span>
+                        </div>
+                    </div>
+                    <p class="small text-light leading-relaxed mb-4" style="opacity: 0.85;">
+                        إحدى شركات وزارة قطاع الأعمال العام الرائدة في تطوير وإدارة الأصول الفندقية والسياحية والتراثية والتجارية في جمهورية مصر العربية.
+                    </p>
+                    <div class="d-flex align-items-center gap-2">
+                        <a class="social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-btn" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="social-btn" href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a class="social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">روابط سريعة</h5>
+                    <a href="#about" class="footer-link"><i class="fa fa-angle-left text-warning"></i> عن الشركة</a>
+                    <a href="#vision-mission" class="footer-link"><i class="fa fa-angle-left text-warning"></i> رؤيتنا ورسالتنا</a>
+                    <a href="#assets" class="footer-link"><i class="fa fa-angle-left text-warning"></i> أصول الشركة</a>
+                    <a href="#subsidiaries" class="footer-link"><i class="fa fa-angle-left text-warning"></i> الشركات التابعة</a>
+                    <a href="#contact" class="footer-link"><i class="fa fa-angle-left text-warning"></i> اتصل بنا</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">الشركات التابعة</h5>
+                    <a href="#subsidiaries" class="footer-link"><i class="fa fa-angle-left text-warning"></i> شركة إيجوث (EGOTH)</a>
+                    <a href="#subsidiaries" class="footer-link"><i class="fa fa-angle-left text-warning"></i> شركة مصر للسياحة</a>
+                    <a href="#subsidiaries" class="footer-link"><i class="fa fa-angle-left text-warning"></i> شركة مصر للفنادق</a>
+                    <a href="#subsidiaries" class="footer-link"><i class="fa fa-angle-left text-warning"></i> شركة المعمورة للتعمير</a>
+                    <a href="#subsidiaries" class="footer-link"><i class="fa fa-angle-left text-warning"></i> شركة مصر للصوت والضوء</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">النشرة البريدية</h5>
+                    <p class="small text-light mb-3" style="opacity: 0.85;">اشترك للحصول على آخر الأخبار وتحديثات الفرص الاستثمارية.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-sm border-0 px-3" placeholder="بريدك الإلكتروني" required>
+                            <button class="btn btn-gold btn-sm" type="submit"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                    <span class="small text-white-50"><i class="fa fa-lock ms-1 text-warning"></i> نلتزم بحماية خصوصية بياناتك</span>
+                </div>
+            </div>
+
+            <hr style="border-color: rgba(255,255,255,0.1);">
+
+            <div class="row align-items-center pt-2">
+                <div class="col-md-7 text-center text-md-start mb-3 mb-md-0">
+                    <p class="small m-0 text-light" style="opacity: 0.8;">&copy; 2026 جميع الحقوق محفوظة - الشركة القابضة للسياحة والفنادق (HOTAC)</p>
+                </div>
+                <div class="col-md-5 text-center text-md-end">
+                    <div class="d-inline-flex gap-3 small">
+                        <a href="#" class="text-light text-decoration-none" style="opacity: 0.8;">سياسة الخصوصية</a>
+                        <span class="text-white-50">|</span>
+                        <a href="#" class="text-light text-decoration-none" style="opacity: 0.8;">شروط الاستخدام</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
