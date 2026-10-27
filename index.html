@@ -163,6 +163,13 @@
             transform: translateX(-4px);
         }
 
+        @media (min-width: 992px) {
+            .navbar-custom .dropdown:hover > .dropdown-menu,
+            .navbar-custom .dropdown:focus-within > .dropdown-menu {
+                display: block;
+            }
+        }
+
         /* Hero Section Slider */
         .hero-section {
             position: relative;
@@ -618,10 +625,9 @@
             <div class="row align-items-center">
                 <div class="col-md-8">
                     <div class="d-flex align-items-center gap-4">
-                        <span><i class="fa fa-phone-alt text-warning me-2"></i> +20 (2) 27940036 / 27954153</span>
                         <span><i class="fa fa-envelope text-warning me-2"></i> info@hotac.com.eg</span>
-                        <span><i class="fa fa-building text-warning me-2"></i> إحدى شركات وزارة قطاع الأعمال العام</span>
-                    </div>
+                        <span><i class="fa fa-phone-alt text-warning me-2"></i> +20 (2) 27940036 / 27954153</span>
+<!--                         <span><i class="fa fa-building text-warning me-2"></i> إحدى شركات وزارة قطاع الأعمال العام</span>-->                    </div>
                 </div>
                 <div class="col-md-4 text-start">
                     <div class="d-inline-flex align-items-center gap-2">
@@ -629,8 +635,8 @@
                         <a class="social-btn" href="#" title="يوتيوب"><i class="fab fa-youtube"></i></a>
                         <a class="social-btn" href="#" title="تويتر"><i class="fab fa-x-twitter"></i></a>
                         <a class="social-btn" href="#" title="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
-                        <span class="text-white-50 mx-2">|</span>
-                        <a href="#" class="text-white text-decoration-none fw-bold small"><i class="fa fa-globe ms-1"></i> English</a>
+                        <!--<span class="text-white-50 mx-2">|</span>
+                        <a href="#" class="text-white text-decoration-none fw-bold small"><i class="fa fa-globe ms-1"></i> English</a>-->
                     </div>
                 </div>
             </div>
@@ -661,9 +667,9 @@
                     <div class="nav-item dropdown">
                         <a href="#about" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">عن الشركة</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#about" class="dropdown-item"><i class="fa fa-building ms-2 text-warning"></i> الشركة القابضة (التأسيس)</a>
-                            <a href="#vision-mission" class="dropdown-item"><i class="fa fa-eye ms-2 text-warning"></i> رؤيتنا ورسالتنا وقيمنا</a>
-                            <a href="#leadership" class="dropdown-item"><i class="fa fa-user-tie ms-2 text-warning"></i> كلمة القيادة Execs</a>
+                            <a href="#vision-mission" class="dropdown-item"> عن الشركة القابضة</a>
+                            <a href="#about" class="dropdown-item"> البيانات المالية</a>
+                            <a href="#leadership" class="dropdown-item"> الانجازات</a>
                         </div>
                     </div>
 
@@ -671,9 +677,9 @@
                     <div class="nav-item dropdown">
                         <a href="#assets" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">أصول الشركة</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#assets" class="dropdown-item"><i class="fa fa-hotel ms-2 text-warning"></i> الفنادق التاريخية والحديثة</a>
-                            <a href="#assets" class="dropdown-item"><i class="fa fa-utensils ms-2 text-warning"></i> المطاعم والمنشآت السياحية</a>
-                            <a href="#assets" class="dropdown-item"><i class="fa fa-map-marked-alt ms-2 text-warning"></i> الأراضي والفرص العقارية</a>
+                            <a href="#assets" class="dropdown-item"><i class="fa fa-hotel ms-2 text-warning"></i> الفنادق</a>
+                            <a href="#assets" class="dropdown-item"><i class="fa fa-utensils ms-2 text-warning"></i> المطاعم  </a>
+                            <a href="#assets" class="dropdown-item"><i class="fa fa-map-marked-alt ms-2 text-warning"></i> الأراضي </a>
                         </div>
                     </div>
 
@@ -694,14 +700,15 @@
                     </div>
 
                     <a href="#investments" class="nav-item nav-link">فرص الاستثمار</a>
+                    <a href="#investments" class="nav-item nav-link"> الشركات المشاركة</a>
                     <a href="#news" class="nav-item nav-link">الأخبار</a>
                     <a href="#contact" class="nav-item nav-link">اتصل بنا</a>
 
-                    <div class="ms-lg-3 mt-3 mt-lg-0">
+                    <!-- <div class="ms-lg-3 mt-3 mt-lg-0">
                         <a href="#investments" class="btn btn-gold py-2 px-3 text-nowrap" style="font-size: 0.88rem;">
                             <i class="fa fa-handshake ms-1"></i> بوابة الاستثمار
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
