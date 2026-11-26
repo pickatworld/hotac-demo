@@ -678,6 +678,199 @@
             color: var(--gold-hover);
         }
 
+        .participation-index {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 0 auto 3rem;
+        }
+
+        .participation-index a {
+            padding: 9px 16px;
+            border: 1px solid #dce4ec;
+            border-radius: 999px;
+            color: var(--primary-navy);
+            background: #fff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .participation-index a:hover {
+            border-color: var(--primary-navy);
+            color: #fff;
+            background: var(--primary-navy);
+        }
+
+        .participation-group {
+            margin-top: 3.5rem;
+            scroll-margin-top: 100px;
+        }
+
+        .participation-group-heading {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 1.4rem;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #dce4ec;
+        }
+
+        .participation-group-heading .section-badge {
+            margin-bottom: 4px;
+        }
+
+        .participation-group-heading h3 {
+            margin: 0;
+            color: var(--primary-navy);
+            font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+            font-weight: 800;
+        }
+
+        .participation-source {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: center;
+            gap: 7px;
+            color: var(--secondary-navy);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .participation-source:hover {
+            color: var(--gold-hover);
+        }
+
+        .participation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+            gap: 18px;
+        }
+
+        .participation-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-width: 0;
+            height: 100%;
+            padding: 22px;
+            border: 1px solid #e2e8f0;
+            border-top: 3px solid var(--accent-gold);
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 8px 24px rgba(11, 37, 69, 0.05);
+        }
+
+        .participation-card-heading {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .participation-card h4 {
+            margin: 0;
+            color: var(--primary-navy);
+            font-size: 1.05rem;
+            font-weight: 800;
+            line-height: 1.6;
+        }
+
+        .participation-rate,
+        .participation-status {
+            flex-shrink: 0;
+            padding: 5px 9px;
+            border-radius: 7px;
+            color: var(--primary-navy);
+            background: rgba(197, 160, 89, 0.16);
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        .participation-status {
+            color: #6b5b39;
+            background: #f2eee5;
+        }
+
+        .participation-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .participation-metrics span {
+            padding: 5px 9px;
+            border-radius: 6px;
+            color: #46566a;
+            background: #f3f6f9;
+            font-size: 0.78rem;
+        }
+
+        .participation-card p {
+            margin: 0;
+            color: var(--muted-text);
+            font-size: 0.88rem;
+            line-height: 1.8;
+        }
+
+        .participation-card-muted {
+            border-top-color: #9aa7b5;
+            background: #fafbfc;
+        }
+
+        .inactive-participations {
+            margin-top: 1.5rem;
+            padding: 16px 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .inactive-participations summary {
+            color: var(--primary-navy);
+            cursor: pointer;
+            font-weight: 800;
+        }
+
+        .inactive-participations[open] summary {
+            margin-bottom: 16px;
+        }
+
+        .participation-notice {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 18px 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            color: var(--secondary-navy);
+            background: #fff;
+        }
+
+        .participation-notice i {
+            margin-top: 4px;
+            color: var(--accent-gold);
+        }
+
+        .participation-notice p {
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .participation-disclaimer {
+            margin: 2rem 0 0;
+            padding: 14px 18px;
+            border-right: 3px solid var(--accent-gold);
+            color: var(--muted-text);
+            background: rgba(255, 255, 255, 0.72);
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
         .company-logo {
             width: 82px;
             height: 62px;
@@ -984,6 +1177,15 @@
         @media (max-width: 575.98px) {
             .hero-copy {
                 padding: 20px;
+            }
+
+            .participation-group-heading {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .participation-card {
+                padding: 18px;
             }
 
             .hero-carousel .carousel-item {
